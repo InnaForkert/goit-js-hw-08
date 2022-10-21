@@ -11,8 +11,10 @@ function saveData(event) {
      } = event.currentTarget;
     
     localStorage.setItem("feedback-form-state", JSON.stringify({ email: email.value, message: message.value }));
-    console.log(localStorage.getItem("feedback-form-state"));
 }
+
+form.elements.email.value = JSON.parse(localStorage.getItem("feedback-form-state")).email;
+form.elements.message.value = JSON.parse(localStorage.getItem("feedback-form-state")).message;
 
 
 // function formSubmit(event) {
