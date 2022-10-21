@@ -1,9 +1,7 @@
-
 const form = document.querySelector(".feedback-form");
-// const input = document.querySelector("input");
-// const textarea = document.querySelector("textarea");
 
-form.addEventListener('input', saveData);
+const _ = require("underscore");
+form.addEventListener('input', _.throttle(saveData, 500));
 
 function saveData(event) {
     const {
