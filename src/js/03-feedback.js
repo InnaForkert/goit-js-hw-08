@@ -25,5 +25,5 @@ function formSubmit(event) {
   event.preventDefault();
   console.log(localStorage.getItem('feedback-form-state'));
   event.currentTarget.reset();
-  localStorage.clear();
+  localStorage.removeItem('feedback-form-state');
 }
